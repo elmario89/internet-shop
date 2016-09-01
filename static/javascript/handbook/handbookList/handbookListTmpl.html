@@ -1,1 +1,9 @@
-<div ng-repeat='phone in phones'>{{phone.id}}</div>
+<div ng-repeat='phone in phones'>{{phone.fullname}} {{phone.telephone}}</div>
+
+<br>
+<br>
+<label for="byId">телефон по ID</label>
+<input id='byId' ng-model='id'>
+<button ng-click='getById()'>Get number by ID</button>
+<div ng-if='invalid'>Вы должны ввесты ID</div>
+<div ng-if='!invalid'>{{phoneById.fullname}} {{phoneById.telephone}} <b ng-if='phoneById'>this is ID:</b> {{phoneById.id}}</div>

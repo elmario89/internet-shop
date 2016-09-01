@@ -5,7 +5,8 @@ angular.module('app')
     return{
       restrict: 'E',
       scope: {
-          phones: '=?'
+          phones: '=?',
+          phone: '=?'
       },
       controller: 'handbookListCtrl',
       templateUrl: 'javascript/handbook/handbookList/handbookListTmpl.html'
