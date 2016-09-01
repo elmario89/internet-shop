@@ -4,7 +4,7 @@ var app = express();
 app.use(express.static('static'));
 
 app.get('/api/telephone', function (req, res) {
-  res.json({id:1});
+  res.json([{id:1}, {id:2}, {id:3}]);
 });
 
 app.listen(3000, function () {

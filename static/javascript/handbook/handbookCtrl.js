@@ -5,6 +5,8 @@ function handbookCtrl($scope, $http) {
 
   function success(response) {
     console.log(response);
+    $scope.phones = response.data;
+    console.log($scope.phones);
   }
 
   function error(response) {
