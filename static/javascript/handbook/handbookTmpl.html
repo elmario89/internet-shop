@@ -2,3 +2,10 @@
 <br>
 <br>
 <button ng-click='onGetPhones()'>get telephones</button>
+
+<br><br>
+<div ng-repeat='phone in phones'>
+  <span>Имя: {{phone.fullname}},</span>
+  <span>Телефон: {{phone.telephone}},</span>
+  <span>ID в системе: {{phone.id}}</span>
+</div>

@@ -10,14 +10,10 @@ function($stateProvider) {
     .state('handbook', {
       url: '/handbook',
       templateUrl: 'javascript/route/handbook/handbook.html',
-      controller: ['$scope', handbook]
+      controller: ['$scope', '$http', handbook]
     });
 
-  function handbook($scope, $state, $http, $httpParamSerializer) {
-
-    $scope.getPhones = function() {
-      console.log('weve got phones');
-    };
+  function handbook($scope, $http) {
 
     function success(response) {
       $scope.phones = response.data;
@@ -27,7 +23,7 @@ function($stateProvider) {
       console.log(response);
     }
 
-    $scope.request = function() {
+    $scope.getPhones = function() {
       $http({
         method: 'GET',
         url: '/api/telephone'
