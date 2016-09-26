@@ -14,7 +14,7 @@ function($stateProvider) {
     });
 
   function handbook($scope, $state, $http, $httpParamSerializer) {
-    
+    $scope.test = 'test';
   }
 
 }]);

@@ -5,7 +5,7 @@ angular.module('app')
     return{
       restrict: 'E',
       scope: {
-
+        variable: '=?'
       }, 
       controller: 'handbookCtrl',
       templateUrl: 'javascript/handbook/handbookTmpl.html'
