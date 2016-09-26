@@ -1,20 +1,9 @@
 angular.module('app')
-  .controller('handbookCtrl', ['$scope', '$http', handbookCtrl]);
+  .controller('handbookCtrl', ['$scope', handbookCtrl]);
 
-function handbookCtrl($scope, $http) {
+function handbookCtrl($scope) {
 
-  function success(response) {
-    $scope.phones = response.data;
-  }
-
-  function error(response) {
-    console.log(response);
-  }
-
-  $scope.request = function() {
-    $http({
-      method: 'GET',
-      url: '/api/telephone'
-    }).then(success, error);
+  $scope.onGetPhones = $scope.onGetPhones || function() {
+    console.error("Define getPhones function in handbook route");
   };
 };

@@ -14,7 +14,26 @@ function($stateProvider) {
     });
 
   function handbook($scope, $state, $http, $httpParamSerializer) {
-    $scope.test = 'test';
+
+    $scope.getPhones = function() {
+      console.log('weve got phones');
+    };
+
+    function success(response) {
+      $scope.phones = response.data;
+    }
+
+    function error(response) {
+      console.log(response);
+    }
+
+    $scope.request = function() {
+      $http({
+        method: 'GET',
+        url: '/api/telephone'
+      }).then(success, error);
+    };
+
   }
 
 }]);

@@ -5,7 +5,8 @@ angular.module('app')
     return{
       restrict: 'E',
       scope: {
-        variable: '=?'
+        data: '=?',
+        onGetPhones: '=?'
       }, 
       controller: 'handbookCtrl',
       templateUrl: 'javascript/handbook/handbookTmpl.html'
