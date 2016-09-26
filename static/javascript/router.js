@@ -10,8 +10,8 @@ angular.module('app')
         url: "/main",
         templateUrl: "javascript/main.html",
       })
-      .state('handbook', {
-        url: '/handbook',
-        templateUrl: "javascript/route/handbook/handbook.html"
-      })
+      // .state('main.handbook', {
+      //   url: '/handbook',
+      //   templateUrl: "javascript/route/handbook/handbook.html"
+      // })
   });

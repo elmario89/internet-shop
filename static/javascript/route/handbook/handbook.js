@@ -7,7 +7,7 @@ function($stateProvider) {
 
   var menuTop;
   $stateProvider
-    .state('main.handbook', {
+    .state('handbook', {
       url: '/handbook',
       templateUrl: 'javascript/route/handbook/handbook.html',
       controller: ['$scope', handbook]
