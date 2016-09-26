@@ -6,6 +6,7 @@ angular.module('app')
       restrict: 'E',
       scope: {
         phones: '=?',
+        btnState: '=?',
         onGetPhones: '=?'
       }, 
       controller: 'handbookCtrl',

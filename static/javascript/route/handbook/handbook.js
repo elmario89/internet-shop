@@ -17,6 +17,7 @@ function($stateProvider) {
 
     function success(response) {
       $scope.phones = response.data;
+      $scope.phonesReceived = true;
     }
 
     function error(response) {
