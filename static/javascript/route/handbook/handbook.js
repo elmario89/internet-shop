@@ -9,7 +9,7 @@ function($stateProvider) {
   $stateProvider
     .state('main.handbook', {
       url: '/handbook',
-      templateUrl: 'route/handbook/handbook.html',
+      templateUrl: 'javascript/route/handbook/handbook.html',
       controller: ['$scope', handbook]
     });
 

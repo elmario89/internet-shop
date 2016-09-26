@@ -6,12 +6,12 @@ angular.module('app')
     //
     // Now set up the states
     $stateProvider
-      // .state('handbook', {
-      //   url: '/handbook',
-      //   templateUrl: "javascript/handbook/handbookTmpl.html"
-      // })
       .state('main', {
         url: "/main",
         templateUrl: "javascript/main.html",
+      })
+      .state('handbook', {
+        url: '/handbook',
+        templateUrl: "javascript/route/handbook/handbook.html"
       })
   });

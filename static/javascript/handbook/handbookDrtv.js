@@ -8,6 +8,6 @@ angular.module('app')
 
       }, 
       controller: 'handbookCtrl',
-      templateUrl: 'handbookTmpl.html'
+      templateUrl: 'javascript/handbook/handbookTmpl.html'
     };
   };
