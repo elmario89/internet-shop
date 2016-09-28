@@ -32,16 +32,17 @@ function($stateProvider) {
       }).then(phones.success, phones.error);
     };
 
-
+    $scope.phoneById = {};
     var phone = {
        success: function(response) {
-        $scope.phoneById = response.data;
-        console.log($scope.phoneById)
-        $scope.invalid = false;
+        $scope.phoneById.data = response.data;
+        $scope.phoneById.invalid = false;
+        delete $scope.phoneById.message;
 
-        if (!$scope.phoneById) {
-          $scope.invalid = true;
-          $scope.message = "Нет пользователя с таким ID";
+        if (!$scope.phoneById.data) {
+          $scope.phoneById.invalid = true;
+          $scope.phoneById.message = "Нет пользователя с таким ID";
+          console.log($scope.phoneById.message);
         }
       },
       error: function(response) {
@@ -50,9 +51,11 @@ function($stateProvider) {
     };
 
     $scope.invalid = false;
+    delete $scope.phoneById.message;
     $scope.getById= function(id) {
       if (id) {
-        $scope.invalid = false;
+        $scope.phoneById.invalid = false;
+        delete $scope.phoneById.message;
 
         $http({
           method: 'GET',
@@ -60,8 +63,8 @@ function($stateProvider) {
         }).then(phone.success, phone.error);
       }
       else {
-        $scope.invalid = true;
-        $scope.message = "Введите ID";
+        $scope.phoneById.invalid = true;
+        $scope.phoneById.message = "Введите ID";
       }
     };
 

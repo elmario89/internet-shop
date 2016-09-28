@@ -9,8 +9,6 @@ angular.module('app')
           phone: '=?',
           onGetById: '=?',
           phone: '=?',
-          message: '=?',
-          invalid: '=?'
       },
       controller: 'handbookListCtrl',
       templateUrl: 'javascript/handbook/handbookList/handbookListTmpl.html'
