@@ -2,8 +2,8 @@
 
 <br>
 <br>
-<label for="byId">телефон по ID</label>
+<label for="byId">Вывести пользователя по ID</label>
 <input id='byId' ng-model='id'>
-<button ng-click='getById()'>Get number by ID</button>
-<div ng-if='invalid'>Вы должны ввесты ID</div>
+<button ng-click='getById()' ng-disabled='!phones'>Get by ID</button>
+<div ng-if='invalid'>Введите параметры</div>
 <div ng-if='!invalid'>{{phoneById.fullname}} {{phoneById.telephone}} <b ng-if='phoneById'>this is ID:</b> {{phoneById.id}}</div>

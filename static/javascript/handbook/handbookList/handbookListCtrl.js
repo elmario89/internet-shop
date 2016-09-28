@@ -12,7 +12,7 @@ angular.module('app')
     }
 
     $scope.invalid = false;
-    $scope.getById = function() {
+    $scope.getById= function() {
       if ($scope.id) {
         $scope.invalid = false;
 
