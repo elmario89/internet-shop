@@ -15,24 +15,54 @@ function($stateProvider) {
 
   function handbook($scope, $http) {
 
-    function success(response) {
-      $scope.phones = response.data;
-      $scope.phonesReceived = true;
-    }
-
-    function error(response) {
-      console.log(response);
-    }
+    var phones = {
+      success: function(response) {
+        $scope.phones = response.data;
+        $scope.phonesReceived = true;
+      },
+      error: function(response) {
+        console.log(response);
+      }
+    };
 
     $scope.getPhones = function() {
       $http({
         method: 'GET',
         url: '/api/telephone'
-      }).then(success, error);
+      }).then(phones.success, phones.error);
     };
 
-    $scope.getById = function() {
-      console.log('defined');
+
+    var phone = {
+       success: function(response) {
+        $scope.phoneById = response.data;
+        console.log($scope.phoneById)
+        $scope.invalid = false;
+
+        if (!$scope.phoneById) {
+          $scope.invalid = true;
+          $scope.message = "Нет пользователя с таким ID";
+        }
+      },
+      error: function(response) {
+        console.log(response);
+      }
+    };
+
+    $scope.invalid = false;
+    $scope.getById= function(id) {
+      if (id) {
+        $scope.invalid = false;
+
+        $http({
+          method: 'GET',
+          url: '/api/telephone/' + (id - 1)
+        }).then(phone.success, phone.error);
+      }
+      else {
+        $scope.invalid = true;
+        $scope.message = "Введите ID";
+      }
     };
 
   }

@@ -4,6 +4,6 @@
 <br>
 <label for="byId">Вывести пользователя по ID</label>
 <input id='byId' ng-model='id'>
-<button ng-click='onGetById()' ng-disabled='!phones'>Get by ID</button>
+<button ng-click='onGetById(id)' ng-disabled='!phones'>Get by ID</button>
 <div ng-if='invalid'>{{message}}</div>
-<div ng-if='!invalid'>{{phoneById.fullname}} {{phoneById.telephone}} <b ng-if='phoneById'>ID пользователя:</b> {{phoneById.id}}</div>
+<div ng-if='!invalid'>{{phone.fullname}} {{phone.telephone}} <b ng-if='phone'>ID пользователя:</b> {{phone.id}}</div>

@@ -8,7 +8,10 @@ angular.module('app')
         phones: '=?',
         btnState: '=?',
         onGetPhones: '=?',
-        onGetById: '=?'
+        onGetById: '=?',
+        phone: '=?',
+        message: '=?',
+        invalid: '=?'
       }, 
       controller: 'handbookCtrl',
       templateUrl: 'javascript/handbook/handbookTmpl.html'

@@ -7,7 +7,10 @@ angular.module('app')
       scope: {
           phones: '=?',
           phone: '=?',
-          onGetById: '=?'
+          onGetById: '=?',
+          phone: '=?',
+          message: '=?',
+          invalid: '=?'
       },
       controller: 'handbookListCtrl',
       templateUrl: 'javascript/handbook/handbookList/handbookListTmpl.html'
