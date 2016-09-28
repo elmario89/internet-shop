@@ -21,7 +21,8 @@ app.get('/api/telephone', function (req, res) {
 });
 
 app.get('/api/telephone/:id', function (req, res) {
-  var param = req.params.id;
+  var id = req.params.id;
+  id = id - 1;
   var phones = [{
     id: 1,
     telephone: "+7 999 99 99",
@@ -35,7 +36,7 @@ app.get('/api/telephone/:id', function (req, res) {
     telephone: "+7 777 77 77",
     fullname: "Andreas Rios"
   }]
-  res.json(phones);
+  res.json(phones[id]);
 });
 
 app.listen(3000, function () {
