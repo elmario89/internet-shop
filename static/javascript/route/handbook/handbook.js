@@ -59,7 +59,7 @@ function($stateProvider) {
 
         $http({
           method: 'GET',
-          url: '/api/telephone/' + (id - 1)
+          url: '/api/telephone/' + (id)
         }).then(phone.success, phone.error);
       }
       else {
