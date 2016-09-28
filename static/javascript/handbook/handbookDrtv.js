@@ -7,7 +7,8 @@ angular.module('app')
       scope: {
         phones: '=?',
         btnState: '=?',
-        onGetPhones: '=?'
+        onGetPhones: '=?',
+        onGetById: '=?'
       }, 
       controller: 'handbookCtrl',
       templateUrl: 'javascript/handbook/handbookTmpl.html'

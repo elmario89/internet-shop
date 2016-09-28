@@ -31,6 +31,9 @@ function($stateProvider) {
       }).then(success, error);
     };
 
-  }
+    $scope.getById = function() {
+      console.log('defined');
+    };
 
+  }
 }]);

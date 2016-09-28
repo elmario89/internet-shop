@@ -4,7 +4,8 @@
 <button ng-click='onGetPhones()' ng-disabled='btnState'>get telephones</button>
 
 <br><br>
-<handbook-list phones='phones'></handbook-list>
+<handbook-list phones='phones'
+               on-get-by-id=onGetById></handbook-list>
 <!-- <div ng-repeat='phone in phones'>
   <span>Имя: {{phone.fullname}},</span>
   <span>Телефон: {{phone.telephone}},</span>

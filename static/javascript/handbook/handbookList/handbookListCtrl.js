@@ -3,33 +3,37 @@ angular.module('app')
 
   function handbookListCtrl($scope, $http) {
 
-    function success(response) {
-      $scope.phoneById = response.data;
-      $scope.invalid = false;
-
-      if (!$scope.phoneById) {
-        $scope.invalid = true;
-        $scope.message = "Нет такого ID";
-      }
-    };
-
-    function error(response) {
-      console.log(response);
+    $scope.onGetById = $scope.onGetById || function() {
+      console.error("Define getById function in handbook route");
     }
 
-    $scope.invalid = false;
-    $scope.getById= function() {
-      if ($scope.id) {
-        $scope.invalid = false;
+    // function success(response) {
+    //   $scope.phoneById = response.data;
+    //   $scope.invalid = false;
 
-        $http({
-          method: 'GET',
-          url: '/api/telephone/' + ($scope.id - 1)
-        }).then(success, error);
-      }
-      else {
-        $scope.invalid = true;
-        $scope.message = "Введите ID";
-      }
-    };
+    //   if (!$scope.phoneById) {
+    //     $scope.invalid = true;
+    //     $scope.message = "Нет пользователя с таким ID";
+    //   }
+    // };
+
+    // function error(response) {
+    //   console.log(response);
+    // }
+
+    // $scope.invalid = false;
+    // $scope.getById= function() {
+    //   if ($scope.id) {
+    //     $scope.invalid = false;
+
+    //     $http({
+    //       method: 'GET',
+    //       url: '/api/telephone/' + ($scope.id - 1)
+    //     }).then(success, error);
+    //   }
+    //   else {
+    //     $scope.invalid = true;
+    //     $scope.message = "Введите ID";
+    //   }
+    // };
   };

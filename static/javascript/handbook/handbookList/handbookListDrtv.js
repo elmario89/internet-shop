@@ -6,7 +6,8 @@ angular.module('app')
       restrict: 'E',
       scope: {
           phones: '=?',
-          phone: '=?'
+          phone: '=?',
+          onGetById: '=?'
       },
       controller: 'handbookListCtrl',
       templateUrl: 'javascript/handbook/handbookList/handbookListTmpl.html'
