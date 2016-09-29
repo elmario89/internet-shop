@@ -1,3 +1,3 @@
 # internet-shop
-# $ 'node express.js' to start express local server
-# $ 'npm start' to install all dependencies and build dist with gulp
+$'node express.js' to start express local server
+$'npm start' to install all dependencies and build dist with gulp
