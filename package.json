@@ -1,0 +1,31 @@
+{
+  "name": "internet-shop",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "express.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "http-server": "^0.9.0"
+  },
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0"
+  },
+  "scripts": {
+    "prestart": "npm install",
+    "postinstall": "bower install",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elmario89/internet-shop.git"
+  },
+  "author": "Mikhail Smirnov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elmario89/internet-shop/issues"
+  },
+  "homepage": "https://github.com/elmario89/internet-shop#readme"
+}

@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 
-app.use(express.static('static'));
+app.use(express.static('dist'));
 
 app.get('/api/telephone', function (req, res) {
   var telephonesArray = [{
