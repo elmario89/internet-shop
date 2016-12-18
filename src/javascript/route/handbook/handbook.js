@@ -6,12 +6,12 @@ angular
 function($stateProvider) {
 
   var menuTop;
-  $stateProvider
-    .state('handbook', {
-      url: '/handbook',
-      templateUrl: 'javascript/route/handbook/handbook.html',
-      controller: ['$scope', '$http', handbook]
-    });
+  // $stateProvider
+  //   .state('handbook', {
+  //     url: '/handbook',
+  //     templateUrl: 'javascript/route/handbook/handbook.html',
+  //     controller: ['$scope', '$http', handbook]
+  //   });
 
   function handbook($scope, $http) {
 

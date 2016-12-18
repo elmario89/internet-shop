@@ -9,9 +9,17 @@ angular.module('app')
       .state('main', {
         url: "/main",
         templateUrl: "javascript/main.html",
+        controller: "mainCtrl"
       })
-      // .state('main.handbook', {
-      //   url: '/handbook',
-      //   templateUrl: "javascript/route/handbook/handbook.html"
-      // })
+      .state('main.edit', {
+        url: "/edit",
+        templateUrl: "javascript/main/main-edit.html",
+        controller: "mainCtrl"
+      })
+      .state('handbook', {
+        url: '/handbook',
+        // templateUrl: "javascript/route/handbook/handbook.html"
+        templateUrl: "javascript/handbook/handbookTmpl.html",
+        controller: "mainCtrl"
+      })
   });

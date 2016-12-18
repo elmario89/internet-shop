@@ -1,3 +1,6 @@
 <a ui-sref="handbook">open handbook</a>
-<!-- <handbook></handbook> -->
-<div ui-view></div>
+<div ng-repeat='item in test'>{{item}}</div>
+<button ng-click='first()'>first</button>
+
+<button ng-click='goEdit()'>got to edit</button>
+<div ui-view=''></div>

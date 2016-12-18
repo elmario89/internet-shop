@@ -1,14 +1,4 @@
-<a ui-sref="main">open main</a>
-<br>
-<br>
-<button ng-click='onGetPhones()' ng-disabled='btnState'>get telephones</button>
 
-<br><br>
-<handbook-list phones='phones'
-               on-get-by-id=onGetById
-               phone=phone></handbook-list>
-<!-- <div ng-repeat='phone in phones'>
-  <span>Имя: {{phone.fullname}},</span>
-  <span>Телефон: {{phone.telephone}},</span>
-  <span>ID в системе: {{phone.id}}</span>
-</div> -->
+<div ng-repeat='item in test'>{{item}}</div>
+
+<button ng-click='second()'>first</button>

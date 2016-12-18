@@ -39,6 +39,6 @@ app.get('/api/telephone/:id', function (req, res) {
   res.json(phones[id]);
 });
 
-app.listen(3000, function () {
+app.listen(3002, function () {
   console.log('Example app listening on port 3000!');
 });
