@@ -1,12 +1,9 @@
 (function() {
   'use strict';
 	  angular.module('app')
-		.controller('main', ['$timeout', '$state', '$rootScope', main]);
+		.controller('main', [main]);
 
-		function main($timeout, $state, $rootScope) {
-			var vm = this;
-			
-			vm.isAnimating =false;
+		function main() {
 
 		}
 })();
