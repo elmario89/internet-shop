@@ -33,9 +33,10 @@ body{
         display: table-cell;
         background-color: darkgreen;
         transition: all 1s;
+        transform: translateX(-100%);
 
         &.animate{
-            transform: translateX(-100%);
+            transform: translateX(0);
         }
     }
 
@@ -44,9 +45,10 @@ body{
         display: table-cell;
         background-color: darkgreen;
         transition: all 1s;
+        transform: translateX(100%);
 
         &.animate{
-            transform: translateX(100%);
+            transform: translateX(0);
         }
     }
 }

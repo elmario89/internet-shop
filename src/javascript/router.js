@@ -16,7 +16,10 @@ angular.module('app')
           url: '/green',
           templateUrl: "javascript/states/green.html",
           controller: "main",
-          controllerAs: 'vm'
+          controllerAs: 'vm',
+          onEnter: function(isAnimating){
+            console.log(isAnimating);
+          }
       })
       .state('teal', {
           url: '/teal',
