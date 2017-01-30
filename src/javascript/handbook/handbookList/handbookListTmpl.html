@@ -1,9 +1,0 @@
-<div ng-repeat='phone in phones'>{{phone.fullname}} {{phone.telephone}}</div>
-
-<br>
-<br>
-<label for="byId">Вывести пользователя по ID</label>
-<input id='byId' ng-model='id'>
-<button ng-click='onGetById(id)' ng-disabled='!phones'>Get by ID</button>
-<div ng-if='phone.invalid'><b>{{phone.message}}</b></div>
-<div ng-if='!phone.invalid'>{{phone.data.fullname}} {{phone.data.telephone}} <b ng-if='phone.data'>ID пользователя:</b> {{phone.data.id}}</div>

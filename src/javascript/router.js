@@ -9,17 +9,25 @@ angular.module('app')
       .state('main', {
         url: "/main",
         templateUrl: "javascript/main.html",
-        controller: "mainCtrl"
+        controller: "main",
+        controllerAs: 'vm'
       })
-      .state('main.edit', {
-        url: "/edit",
-        templateUrl: "javascript/main/main-edit.html",
-        controller: "mainCtrl"
+      .state('green', {
+          url: '/green',
+          templateUrl: "javascript/states/green.html",
+          controller: "main",
+          controllerAs: 'vm'
       })
-      .state('handbook', {
-        url: '/handbook',
-        // templateUrl: "javascript/route/handbook/handbook.html"
-        templateUrl: "javascript/handbook/handbookTmpl.html",
-        controller: "mainCtrl"
+      .state('teal', {
+          url: '/teal',
+          templateUrl: "javascript/states/teal.html",
+          controller: "main",
+          controllerAs: 'vm'
+      })
+      .state('red', {
+          url: '/red',
+          templateUrl: "javascript/states/red.html",
+          controller: "main",
+          controllerAs: 'vm'
       })
   });

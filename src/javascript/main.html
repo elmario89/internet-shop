@@ -1,6 +1,8 @@
-<a ui-sref="handbook">open handbook</a>
-<div ng-repeat='item in test'>{{item}}</div>
-<button ng-click='first()'>first</button>
-
-<button ng-click='goEdit()'>got to edit</button>
-<div ui-view=''></div>
+<div class="sidebar">
+    <ul>
+        <li><a ng-click="vm.goToState('green')">green</a></li>
+        <li><a ng-click="vm.goToState('teal')">teal</a></li>
+        <li><a ng-click="vm.goToState('red')">red</a></li>
+        <li><a ng-click="vm.goToState('main')">main</a></li>
+    </ul>
+</div>
