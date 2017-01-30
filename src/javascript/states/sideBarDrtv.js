@@ -6,7 +6,16 @@
 
   function sideBar() {
     function link(scope, element, attrs) {
-     
+      var vm = scope;
+
+      vm.goToState = function(state){
+        alert('bam')
+        vm.isAnimating = true;
+        
+        $timeout(function() {
+          $state.go(state);
+        }, 1100);
+      };
     }
 
     return {
@@ -14,7 +23,7 @@
       },
       restrict: 'E',
       controller: 'main',
-      templateUrl: 'sideBarTmpl.html',
+      templateUrl: 'javascript/states/sideBarTmpl.html',
       link: link
     };
   }

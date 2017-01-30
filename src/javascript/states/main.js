@@ -6,17 +6,4 @@ function main($timeout, $state, $rootScope) {
 	
 	vm.isAnimating =false;
 	
-	vm.goToState = function(state){	
-		vm.isAnimating = true;
-		
-		$timeout(function() {
-			$state.go(state);
-		}, 1100);
-	};
-
-	$rootScope.$on('$stateChangeSuccess',function(){
-		vm.isAnimating = someService.doSomething();
-
-		console.log(vm.isAnimating);
-  });
 }
