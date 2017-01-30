@@ -14,7 +14,7 @@ angular.module('app')
       .state('green', {
           url: '/green',
           templateUrl: "javascript/states/green.html",
-          controller: "main",
+          controller: "main"
       })
       .state('teal', {
           url: '/teal',

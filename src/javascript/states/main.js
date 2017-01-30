@@ -6,7 +6,7 @@
 		function main($scope) {
       $scope.isAnimating = false;
 			$scope.animate = function() {
-				$scope.isAnimating = true;
+				$scope.isAnimating = !$scope.isAnimating;
 			};
 		}
 })();
