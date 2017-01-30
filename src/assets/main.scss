@@ -1,7 +1,9 @@
 body{
     margin: 0;
     padding: 0;
+    height: 100%;
 }
+
 
 .sidebar{
     position: fixed;
@@ -23,7 +25,20 @@ body{
 }
 
 .green{
-    background-color: darkgreen;
+    display: table;
+    width: 100%;
+
+    .left{
+        width: 50%;
+        display: table-cell;
+        background-color: darkgreen;
+    }
+
+    .right{
+        width: 50%;
+        display: table-cell;
+        background-color: darkgreen;
+    }
 }
 
 .red{
@@ -46,8 +61,21 @@ ul{
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            //height: 100%;
-            //width: 100%;
         }
+    }
+}
+
+.main-page-text{
+    position: absolute;
+    transition: all 2s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+
+
+    &.animated{
+        transform: translate(-100%, -50%);
     }
 }
