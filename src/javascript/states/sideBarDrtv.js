@@ -6,9 +6,8 @@
 
   function sideBar() {
     function link(scope, element, attrs) {
-      // vm.goToState = function(state){
-      //   alert('bam')
-      //   vm.isAnimating = true;
+      // scope.goToState = function(state){
+      //   alert(state);
         
       //   $timeout(function() {
       //     $state.go(state);
