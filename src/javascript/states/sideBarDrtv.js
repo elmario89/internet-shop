@@ -1,7 +1,7 @@
 (function() {
   'use strict';
   angular
-  .module('ISUP')
+  .module('app')
   .directive('sideBar', sideBar);
 
   function sideBar() {
