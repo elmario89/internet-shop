@@ -1,10 +1,12 @@
-<p class="main-page-text" ng-class="{animated: vm.isAnimating}"> this is main page, click in sidebar to navigate</p>
+<div class="main-page-text">
+  <span>this is main page, click in sidebar to navigate</span>
+</div>
 
 <div class="sidebar">
     <ul>
-        <li><a ng-click="vm.goToState('green')">green</a></li>
-        <li><a ng-click="vm.goToState('teal')">teal</a></li>
-        <li><a ng-click="vm.goToState('red')">red</a></li>
-        <li><a ng-click="vm.goToState('main')">main</a></li>
+        <li><a sidebar-elem ng-click="vm.goToState('green')">green</a></li>
+        <li><a sidebar-elem ng-click="vm.goToState('teal')">teal</a></li>
+        <li><a sidebar-elem ng-click="vm.goToState('red')">red</a></li>
+        <li><a sidebar-elem ng-click="vm.goToState('main')">main</a></li>
     </ul>
 </div>

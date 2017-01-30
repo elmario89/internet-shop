@@ -1,26 +1,22 @@
 angular.module('app')
-	.controller('main', ['$timeout', '$state', '$rootScope', main]);
+	.controller('main', ['$timeout', '$state', '$rootScope', 'someService', main]);
 
-function main($timeout, $state, $rootScope) {
+function main($timeout, $state, $rootScope, someService) {
 	var vm = this;
 	
-	vm.isAnimating = false;
+	vm.isAnimating =false;
 	
-	vm.goToState = function(state){
+	vm.goToState = function(state){	
 		vm.isAnimating = true;
 		
 		$timeout(function() {
 			$state.go(state);
-		}, 2000);
-		
-		$rootScope.$on('$stateChangeSuccess', function() {
-			vm.isAnimating = true;
-			
-			alert(vm.isAnimating)
-			
-			// $timeout(function() {
-			// 	vm.isAnimating = false;
-			// }, 2000);
-		});
+		}, 1100);
 	};
+
+	$rootScope.$on('$stateChangeSuccess',function(){
+		vm.isAnimating = someService.doSomething();
+
+		console.log(vm.isAnimating);
+  });
 }

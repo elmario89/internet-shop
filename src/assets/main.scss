@@ -65,17 +65,22 @@ ul{
     }
 }
 
+
 .main-page-text{
     position: absolute;
-    transition: all 2s;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transition: all 1s;
+    height: 100%;
     width: 100%;
     text-align: center;
 
+    span{
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
 
     &.animated{
-        transform: translate(-100%, -50%);
+        transform: translateX(-100%);
     }
 }
