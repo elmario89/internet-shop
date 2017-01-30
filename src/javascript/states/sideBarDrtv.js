@@ -17,6 +17,7 @@
 
     return {
       scope: {
+        startAnimating: '=?'
       },
       restrict: 'E',
       controller: 'sideBarCtrl',

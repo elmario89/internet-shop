@@ -8,6 +8,7 @@
 
 			vm.animate = function() {
 				vm.isAnimating = true;
+				alert('bam')
 			};
 		}
 })();
