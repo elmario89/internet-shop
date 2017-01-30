@@ -11,7 +11,16 @@ function main($timeout, $state, $rootScope) {
 		
 		$timeout(function() {
 			$state.go(state);
-			vm.isAnimating = false;
 		}, 2000);
+		
+		$rootScope.$on('$stateChangeSuccess', function() {
+			vm.isAnimating = true;
+			
+			alert(vm.isAnimating)
+			
+			// $timeout(function() {
+			// 	vm.isAnimating = false;
+			// }, 2000);
+		});
 	};
 }
