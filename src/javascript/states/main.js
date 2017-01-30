@@ -1,13 +1,12 @@
 (function() {
   'use strict';
 	  angular.module('app')
-		.controller('main', [main]);
+		.controller('main', ['$scope', main]);
 
-		function main() {
-			var vm = this;
-
-			vm.animate = function() {
-				vm.isAnimating = true;
+		function main($scope) {
+      $scope.isAnimating = false;
+			$scope.animate = function() {
+				$scope.isAnimating = true;
 			};
 		}
 })();
