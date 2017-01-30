@@ -1,12 +1,12 @@
 (function() {
   'use strict';
     angular.module('app')
-    .controller('sideBarCtrl', ['$scope', sideBarCtrl]);
+    .controller('sideBarCtrl', ['$scope', '$state', sideBarCtrl]);
 
-    function sideBarCtrl($scope) {
+    function sideBarCtrl($scope, $state) {
 
       $scope.goToState = function(state){
-        alert(state);
+        $state.go(state);
       }
     }
 })();

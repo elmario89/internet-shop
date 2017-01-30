@@ -84,3 +84,8 @@ ul{
         transform: translateX(-100%);
     }
 }
+
+.animateBtn{
+    position: relative;
+    z-index: 10;
+}
