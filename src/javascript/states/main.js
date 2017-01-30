@@ -4,7 +4,7 @@
 		.controller('main', ['$scope', main]);
 
 		function main($scope) {
-      $scope.isAnimating = true;
+      $scope.isAnimating = false;
 			$scope.animate = function() {
 				$scope.isAnimating = !$scope.isAnimating;
 			};

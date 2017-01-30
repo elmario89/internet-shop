@@ -6,13 +6,6 @@
 
   function sideBar() {
     function link(scope, element, attrs) {
-      // scope.goToState = function(state){
-      //   alert(state);
-        
-      //   $timeout(function() {
-      //     $state.go(state);
-      //   }, 1100);
-      // };
     }
 
     return {

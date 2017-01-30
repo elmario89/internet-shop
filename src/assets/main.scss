@@ -18,43 +18,47 @@ body{
     position: fixed;
     width: 100%;
     height: 100%;
+    display: table;
 }
 
 .teal{
-    background-color: teal;
+    .left, .right{
+        background-color: teal;
+    }
 }
 
 .green{
-    display: table;
-    width: 100%;
-
-    .left{
-        width: 50%;
-        display: table-cell;
+    .left, .right{
         background-color: darkgreen;
-        transition: all 1s;
-        transform: translateX(-100%);
-
-        &.animate{
-            transform: translateX(0);
-        }
-    }
-
-    .right{
-        width: 50%;
-        display: table-cell;
-        background-color: darkgreen;
-        transition: all 1s;
-        transform: translateX(100%);
-
-        &.animate{
-            transform: translateX(0);
-        }
     }
 }
 
 .red{
-    background-color: red;
+    .left, .right{
+        background-color: red;
+    }
+}
+
+.left{
+    width: 50%;
+    display: table-cell;
+    transition: all 1s;
+    transform: translateX(-100%);
+
+    &.animate{
+        transform: translateX(0);
+    }
+}
+
+.right{
+    width: 50%;
+    display: table-cell;
+    transition: all 1s;
+    transform: translateX(100%);
+
+    &.animate{
+        transform: translateX(0);
+    }
 }
 
 ul{
