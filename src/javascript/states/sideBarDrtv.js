@@ -8,21 +8,21 @@
     function link(scope, element, attrs) {
       var vm = scope;
 
-      vm.goToState = function(state){
-        alert('bam')
-        vm.isAnimating = true;
+      // vm.goToState = function(state){
+      //   alert('bam')
+      //   vm.isAnimating = true;
         
-        $timeout(function() {
-          $state.go(state);
-        }, 1100);
-      };
+      //   $timeout(function() {
+      //     $state.go(state);
+      //   }, 1100);
+      // };
     }
 
     return {
       scope: {
       },
       restrict: 'E',
-      controller: 'main',
+      controller: 'sideBarCtrl',
       templateUrl: 'javascript/states/sideBarTmpl.html',
       link: link
     };
