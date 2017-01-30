@@ -1,7 +1,7 @@
 angular.module('app')
-	.controller('main', ['$timeout', '$state', '$rootScope', 'someService', main]);
+	.controller('main', ['$timeout', '$state', '$rootScope', main]);
 
-function main($timeout, $state, $rootScope, someService) {
+function main($timeout, $state, $rootScope) {
 	var vm = this;
 	
 	vm.isAnimating =false;
