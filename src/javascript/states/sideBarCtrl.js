@@ -10,8 +10,6 @@
       }
 
       $scope.goToState = function(state){
-        
-
         $timeout(function(){
           $state.go(state);
         }, 1100)
